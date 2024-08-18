@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 import sqlite3
+from PIL import Image, ImageTk
 
 # Connect to the SQLite database
 conn = sqlite3.connect("hospital.db")
@@ -35,6 +36,8 @@ cursor.execute('''
 ''', ("doc", "doc", "doctor"))
 
 conn.commit()
+
+
 
 class HospitalManagementSystem(tk.Tk):
     def __init__(self):
@@ -76,9 +79,6 @@ class HospitalManagementSystem(tk.Tk):
         menu.add_cascade(label="About", menu=about_menu)
         about_menu.add_command(label="About", command=lambda: self.show_frame("AboutPage"))
 
-
-import tkinter as tk
-from PIL import Image, ImageTk
 
 class IntroPage(tk.Frame):
     def __init__(self, parent, controller):
@@ -125,9 +125,6 @@ class IntroPage(tk.Frame):
 
         # Ensure the layout resizes correctly
         self.pack(fill="both", expand=True)
-
-
-
 
 
 class SignUpPage(tk.Frame):
@@ -211,10 +208,6 @@ class LoginPage(tk.Frame):
         else:
             messagebox.showerror("Error", "Invalid Credentials")
 
-import tkinter as tk
-from tkinter import messagebox
-from PIL import Image, ImageTk
-import sqlite3
 
 class PatientDashboard(tk.Frame):
     def __init__(self, parent, controller):
@@ -305,15 +298,6 @@ class PatientDashboard(tk.Frame):
         self.phone_var.set("")
         self.disease_var.set("")  # Clear the disease field
 
-import tkinter as tk
-from tkinter import messagebox
-import sqlite3
-
-
-
-import tkinter as tk
-from tkinter import messagebox
-import sqlite3
 
 class DoctorDashboard(tk.Frame):
     def __init__(self, parent, controller):
@@ -362,8 +346,6 @@ class DoctorDashboard(tk.Frame):
         
         conn.close()
 
-from PIL import Image, ImageTk
-
 
 class AboutPage(tk.Frame):
     def __init__(self, parent, controller):
@@ -406,8 +388,6 @@ class AboutPage(tk.Frame):
         frame.photo = photo  # Keep a reference to avoid garbage collection
         
         return frame
-
-
 
 
 if __name__ == "__main__":
