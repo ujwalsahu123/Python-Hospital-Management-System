@@ -43,6 +43,9 @@ class HospitalManagementSystem(tk.Tk):
         self.title("Hospital Management System")
         self.geometry("400x300")
         
+        # Set the application icon (favicon)
+        self.iconbitmap('hospital.ico')  # Adjust the path to your favicon file
+        
         container = tk.Frame(self)
         container.pack(side="top", fill="both", expand=True)
         container.grid_rowconfigure(0, weight=1)
@@ -118,7 +121,7 @@ class IntroPage(tk.Frame):
         footer_frame = tk.Frame(self, bg="#e0f7fa")
         footer_frame.pack(side="bottom", pady=20)
         
-        tk.Label(footer_frame, text="XYZ Hospital © 2024", font=('Helvetica', 12), bg="#e0f7fa", fg="#004d40").pack()
+        tk.Label(footer_frame, text="thakur Hospital © 2024", font=('Helvetica', 12), bg="#e0f7fa", fg="#004d40").pack()
 
         # Ensure the layout resizes correctly
         self.pack(fill="both", expand=True)
@@ -382,9 +385,9 @@ class AboutPage(tk.Frame):
         team_frame = tk.Frame(self, bg="#f1f8e9")
         team_frame.pack(pady=20)
         
-        self.create_team_member(team_frame, "Ujwal Sahu", "icon.png").pack(pady=10)
-        self.create_team_member(team_frame, "Ritesh", "icon.png").pack(pady=10)
-        self.create_team_member(team_frame, "Yash", "icon.png").pack(pady=10)
+        self.create_team_member(team_frame, "Ujwal Sahu", "hospital.png").pack(pady=10)
+        self.create_team_member(team_frame, "Ritesh", "hospital.png").pack(pady=10)
+        self.create_team_member(team_frame, "Yash", "hospital.png").pack(pady=10)
         
         # Back Button
         tk.Button(self, text="Back to Home", font=('Helvetica', 14), bg="#00796b", fg="white", command=lambda: self.controller.show_frame("IntroPage")).pack(pady=20)
