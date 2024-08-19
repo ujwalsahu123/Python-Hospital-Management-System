@@ -1,4 +1,4 @@
-<h1>Hospital Management System</h1>
+<h1>Hospital Management System using python and gui</h1>
 <hr>
 <h2>Project Overview</h2>
 This project is a Hospital Management System developed using Python’s tkinter library for the GUI, alongside an SQLite database for managing patient and user data. The system includes functionalities for user registration, patient information management, and a doctor dashboard to handle appointments.
