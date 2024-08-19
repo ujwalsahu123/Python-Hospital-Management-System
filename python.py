@@ -347,47 +347,59 @@ class DoctorDashboard(tk.Frame):
         conn.close()
 
 
+import tkinter as tk
+from tkinter import messagebox
+import webbrowser
+from PIL import Image, ImageTk
+
 class AboutPage(tk.Frame):
     def __init__(self, parent, controller):
         super().__init__(parent)
         self.controller = controller
-        
+
         self.controller.create_menu()
         
-        # Background color
-        self.configure(bg="#f1f8e9")
-        
-        # Title
-        tk.Label(self, text="About Us", font=('Helvetica', 24, 'bold'), bg="#f1f8e9", fg="#004d40").pack(pady=20)
-        
-        # Subtitle
-        tk.Label(self, text="Meet the Team", font=('Helvetica', 18), bg="#f1f8e9", fg="#00796b").pack(pady=10)
-        
-        # Team Members with resized images
-        team_frame = tk.Frame(self, bg="#f1f8e9")
-        team_frame.pack(pady=20)
-        
-        self.create_team_member(team_frame, "Ujwal Sahu", "hospital.png").pack(pady=10)
-        self.create_team_member(team_frame, "Ritesh", "hospital.png").pack(pady=10)
-        self.create_team_member(team_frame, "Yash", "hospital.png").pack(pady=10)
-        
-        # Back Button
-        tk.Button(self, text="Back to Home", font=('Helvetica', 14), bg="#00796b", fg="white", command=lambda: self.controller.show_frame("IntroPage")).pack(pady=20)
+        # About Page Title
+        tk.Label(self, text="About the Project", font=('Helvetica', 24, 'bold')).pack(pady=20)
 
-    def create_team_member(self, parent_frame, name, photo_path):
-        frame = tk.Frame(parent_frame, bg="#f1f8e9")
+        # Team Photo
+        team_image = Image.open("hospital.png")  # Replace with your team photo
+        team_image = team_image.resize((200, 150))
+        team_photo = ImageTk.PhotoImage(team_image)
+        team_label = tk.Label(self, image=team_photo)
+        team_label.image = team_photo  # Keep a reference to avoid garbage collection
+        team_label.pack(pady=10)
+
+        # Team Members Section
+        tk.Label(self, text="Team Members:", font=('Helvetica', 16, 'underline')).pack(pady=10)
         
-        # Load and resize the image
-        image = Image.open(photo_path)
-        image = image.resize((50, 50))  # Resize to 50x50 pixels
-        photo = ImageTk.PhotoImage(image)
+        # Team Members Names
+        tk.Label(self, text="Ujwal", font=('Helvetica', 14)).pack()
+        tk.Label(self, text="Ritesh", font=('Helvetica', 14)).pack()
+        tk.Label(self, text="Yash", font=('Helvetica', 14)).pack()
+
+        # GitHub Icon and Link Section
+        github_frame = tk.Frame(self)
+        github_frame.pack(pady=20)
+
+        # Load the GitHub icon image
+        github_image = Image.open("github-100.png")  # Replace with your GitHub icon
+        github_image = github_image.resize((32, 32))
+        github_icon = ImageTk.PhotoImage(github_image)
+
+        # Create a label with the image and make it clickable
+        github_label = tk.Label(github_frame, image=github_icon, cursor="hand2")
+        github_label.image = github_icon  # Keep a reference to avoid garbage collection
+        github_label.pack(side="left", padx=10)
         
-        # Team member layout
-        tk.Label(frame, text=name, font=('Helvetica', 14), bg="#f1f8e9", fg="#004d40").pack(side="left", padx=10)
-        tk.Label(frame, image=photo, bg="#f1f8e9").pack(side="left")
-        frame.photo = photo  # Keep a reference to avoid garbage collection
+        # GitHub link text next to the image
+        github_link = tk.Label(github_frame, text="View on GitHub", font=('Helvetica', 14), fg="blue", cursor="hand2")
+        github_link.pack(side="left")
+        github_link.bind("<Button-1>", lambda e: webbrowser.open_new("https://github.com/ujwalsahu123/Python-Hospital-Management-System"))
         
-        return frame
+        # Description for the GitHub link
+        tk.Label(self, text="This project is hosted on GitHub for open-source collaboration and version control.").pack(pady=10)
+
 
 
 if __name__ == "__main__":
