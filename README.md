@@ -2,6 +2,7 @@
 <hr>
 <img src='Screenshot 2024-08-18 234235.png' >
 
+
 <hr>
 
 <h2>Project Overview</h2>
@@ -32,7 +33,7 @@ SQLite: Lightweight database used for data storage.
 PIL (Pillow): Used for image processing in the GUI.
 <br>
 <hr>
-
+<img src='Screenshot 2024-08-21 145253.png' >
 Project Structure
 Intro Page: Provides an overview of the system and options to log in or sign up.<br>
 Sign Up Page: Allows new users to register with their username and password.<br>
@@ -66,7 +67,7 @@ During login, the system checks user credentials against the data stored in the 
  *** in vscode run the application by right clicking on the python.py file -> Run python file in the terminal (option) <br>
 5 use chatgpt for help .<br>
 6 download sql lite for database viewing .
-
+<img src='Screenshot 2024-08-21 145200.png' >
 <hr>
 Feel free to fork the project and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
 <hr>
