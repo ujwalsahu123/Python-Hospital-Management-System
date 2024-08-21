@@ -1,8 +1,12 @@
 <h1>Hospital Management System using python and gui</h1>
 <hr>
+
+<hr>
+
 <h2>Project Overview</h2>
 This project is a Hospital Management System developed using Python’s tkinter library for the GUI, alongside an SQLite database for managing patient and user data. The system includes functionalities for user registration, patient information management, and a doctor dashboard to handle appointments.
 <br>
+<hr>
 <h2>Features</h2>
 User Authentication: Allows users to sign up and log in securely.
 <br>
@@ -14,6 +18,7 @@ User Management: Uses SQLite database to store and retrieve user and patient inf
 <br>
 Navigation Menu: Allows easy navigation between the Home and About pages.
 <br>
+<hr>
 <br>
 Technologies Used
 <br>
@@ -25,6 +30,7 @@ SQLite: Lightweight database used for data storage.
 <br>
 PIL (Pillow): Used for image processing in the GUI.
 <br>
+<hr>
 
 Project Structure
 Intro Page: Provides an overview of the system and options to log in or sign up.<br>
@@ -50,11 +56,16 @@ Login Validation:<br>
 During login, the system checks user credentials against the data stored in the users table to determine whether access is granted.
 
 <hr>
-Navigate to the project directory:
-<br>
-cd hospital-management-system
-<br>
-pip install pillow
+<h2>steps to run the application :</h2>
+1 folk this repo to your github <br>
+2 open vscode and and clone your folked repo or this original repo by -> terminal -> git clone (https:...link..) <br>
+3 install python and also intall necessary libraries using the treminal<br>
+4  for Running the applications:<br>
+ Navigate to the project directory:*** you need to be in that folder in the terminal cmd line -> cd Pyhon-Hospital-Management-System<br>
+ *** in vscode run the application by right clicking on the python.py file -> Run python file in the terminal (option) <br>
+5 use chatgpt for help .<br>
+6 download sql lite for database viewing .
+
 <hr>
 Feel free to fork the project and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
 <hr>
