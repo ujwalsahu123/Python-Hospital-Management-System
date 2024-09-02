@@ -8,6 +8,9 @@
 <h2>Project Overview</h2>
 This project is a Hospital Management System developed using Python’s tkinter library for the GUI, alongside an SQLite database for managing patient and user data. The system includes functionalities for user registration, patient information management, and a doctor dashboard to handle appointments.
 <br>
+
+**Problem Statement:**
+Small clinics often struggle with inefficient and error-prone manual processes for managing patient records, appointments, and communication. These challenges can lead to delays, data inaccuracies, and poor patient experiences. The goal is to develop a digital solution that automates and streamlines these processes, ensuring accurate record-keeping, timely appointments, and improved overall clinic management.
 <hr>
 <h2>Features</h2>
 User Authentication: Allows users to sign up and log in securely.
